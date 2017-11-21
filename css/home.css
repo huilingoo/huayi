@@ -1,0 +1,414 @@
+.select {
+	
+}
+/*banner图*/
+.banner {
+	width: 100%;
+	height: 680px;
+	position:relative;
+	overflow: hidden;
+}
+.banner ul li{
+	width:100%; 
+	height:680px; 
+	float:left;
+}
+.banner ul li img{
+	width:100%; 
+	height:680px; 
+	vertical-align:middle ;
+}
+.hd {
+	position: absolute;
+	bottom: 20px;
+	right: 300px;
+}
+.hd li.on {
+	background-color: #025bab!important;
+}
+.hd li {
+	float: left;
+	width: 40px;
+	height: 2px;
+	background-color: white;
+	margin-right: 6px;
+	color: rgba(0,0,0,0);
+}
+.banner-bom {
+	width: 100% !important;
+	height: 90px;
+	background-image: url(../img/home-banner-bom-bg.png) !important;
+}
+.banner-bom-in {
+	width: 1200px;
+	margin: 0 auto;
+}
+.L,.R {
+	float: left;
+	
+}
+.L-pic,.L-text {
+	float: left;
+}
+.L-text {
+	padding: 10px 0;
+	height: 90px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.L-text ul {
+	position: relative;
+}
+.L-text ul li {
+	padding: 8px;
+	overflow: hidden;
+}
+.L-text ul li a {
+	color: black;
+}
+.L-text ul li p {
+	float: left;
+}
+.L-text ul li p span {
+	color: #666666;
+	font-size: 13px;
+}
+.L-text ul li i {
+	float: left;
+	width: 10px;
+	height: 10px;
+	display: block;
+	margin-top: 5px;
+	margin-right: 10px;
+	background-image: url(../img/home-jia.png);
+}
+.L-pic {
+	width: 112px;
+	height: 90px;
+	background-image: url(../img/home-banner-bom.png);
+}
+.content1 {
+	width: 1200px;
+	margin: 79px auto;
+	overflow: hidden;
+}
+.content1-intro {
+	width: 50%;
+	float: left;
+	padding: 30px 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.content1-intro-title p {
+	font-size: 35px;
+}
+.content1-intro-title p span {
+	font-size: 11px;
+}
+.content1-intro-pic {
+	width: 452px;
+	height: 270px;
+	border: 1px solid #025bab;
+	position: relative;
+	margin-top: 50px;
+	margin-left: 70px;
+}
+.content1-intro-pic img {
+	position: absolute;
+	left: -9px;
+	top: -9px;
+}
+.content1-intro-text {
+	margin-top: 40px;
+	padding-right: 35px;
+	box-sizing: border-box;
+	font-size: 16px;
+	text-indent: 2em;
+	color: #999999;
+	line-height: 30px;
+}
+.read {
+	float: right;
+	margin-top: 36px;
+	margin-right: 13px;
+}
+.read a {
+	color: #666666;
+	font-size: 13px;
+	padding: 9px 15px;
+	border: 1px solid black;
+}
+.content1-bus {
+	float: right;
+	overflow: hidden;
+}
+.content1-bus ul {
+	overflow: hidden;
+	height: 156px;
+}
+.content1-bus ul li {
+	width: 169px;
+	height: 156px;
+	float: left;
+	margin-left: 4px;
+	position: relative;
+}
+.blue {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 169px;
+	height: 156px;
+	background-color: rgba(2,91,171,0.8);
+	z-index: 0;
+	display: none;
+}
+.blue-up {
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 38px 20px 10px;
+	box-sizing: border-box;
+	width: 169px;
+	height: 156px;
+	display: inline-block;
+	z-index: 2;
+}
+.ul1 {
+	margin-left: 173px;
+}
+.ul1 li:nth-child(2) {
+	background-image: url(../img/home-business.png);
+}
+.ul2 {
+	margin: 4px 0;
+}
+.ul2 li:nth-child(3) {
+	background-image: url(../img/home-business.png);
+}
+.ul2 li:nth-child(2) {
+	background-image: url(../img/home-business.png);
+}
+.ul2 li:nth-child(1) {
+	background-image: url(../img/home-business.png);
+}
+.ul3 {
+	margin-left: 173px;
+}
+.ul3 li:nth-child(2) {
+	background-image: url(../img/home-business.png);
+}
+.ul3 li:nth-child(1) {
+	background-image: url(../img/home-business.png);
+}
+.ul4 {
+	margin-left: 173px;
+	margin-top: 4px;
+}
+.ul4 li:nth-child(2) {
+	background-image: url(../img/home-business.png);
+}
+.ul4 li:nth-child(1) {
+	background-image: url(../img/home-business.png);
+}
+.content1-bus ul li i {
+	display: block;
+	width: 26px;
+	height: 26px;
+	background-image: url(../img/home-next.png);
+	margin-top: 35px;
+	margin-left: 50px;
+}
+.content1-bus .title {
+	color: black;
+	padding: 40px 5px;
+	box-sizing: border-box;
+	font-size: 35px;
+	text-align: right;
+}
+.span {
+	font-size: 11px;
+	margin-top: 10px;
+}
+.line {
+	width: 50px;
+	height: 1px;
+	background-color: #999999;
+	margin-top: 10px;
+	margin-left: 107px;
+}
+/*案例*/
+.case-out {
+	height: 1240px;
+}
+.case {
+	width: 100%;
+	height: 382px;
+	background-image: url(../img/home-case-banner.png);
+	background-size: cover;
+	
+	/*position: relative;
+	z-index: 1;*/
+}
+.case-con {
+	width: 1200px;
+	margin: 0 auto;
+	padding-top: 56px;
+}
+.case-con-title {
+	overflow: hidden;
+	color: white;
+}
+.con-title-left {
+	float: left;
+}
+.con-title-left p {
+	font-size: 36px;
+}
+.con-title-left p span {
+	font-size: 14px;
+}
+.con-title-right {
+	float: right;
+	margin-top: 15px;
+	
+}
+.con-title-right a {
+	color: white;
+	font-size: 14px;
+}
+.p {
+	margin-top: 53px;
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	text-shadow: 2px 2px 5px #1f1f1f;
+}
+.line2 {
+	width: 50px;
+	height: 2px;
+	background-color: white;
+	margin-top: 20px;
+	margin-left: 48%;
+}
+
+
+
+.case-con ul {
+	margin-top: 30px;
+	overflow: hidden;
+}
+.case-con ul li{
+	text-align: center;
+	font-size: 15px;
+	float: left;
+	margin-right: 2px;
+}
+.case-con ul li p {
+	margin-top: 15px;
+}
+
+
+
+.map {
+	margin-top: 63px;
+	position: relative;
+	height: 483px;
+}
+.map ul {
+	position: absolute;
+	bottom: -15px;	
+}
+.map ul li {
+	float: left;
+	margin-left: 220px;
+}
+.map ul li p {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+.map ul li span {
+	font-size: 14px;
+	color: #666666;
+}
+.ss {
+	color: #025bab !important;
+}
+
+/*链接*/
+.link {
+	width: 100%;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 2px solid #025bab;
+}
+/*.link-con {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.link-con ul li {
+	float: left;
+	margin-right: 51px;
+}
+.link-con ul li img {
+	border: none;
+}*/
+
+.link-p {
+	overflow: hidden;
+	width: 1200px;
+	margin: 0 auto;
+}
+.link-p img,.link-p-in{
+	float: left;
+}
+.link-p a {
+	line-height: 34px;
+	font-size: 18px;
+	float: left;
+	margin-left: 25px;
+	color: #828282;
+}
+
+.case-icon {
+	position: relative;
+}
+.icon-a .prev {
+	position: absolute;
+	top: -223px;
+	left: -957px;
+	width: 28px;
+	height: 72px;
+	background-image: url(../img/home-icon.png);
+	display: block;
+	cursor: pointer;
+	
+}
+.icon-a .next {
+	position: absolute;
+	top: -223px;
+	right: -345px;
+	width: 28px;
+	height: 72px;
+	background-image: url(../img/home-icon.png);
+	display: block;
+	transform: rotate(180deg);
+	z-index: 100;
+	cursor: pointer;
+}
+.case-icon-ul {
+	width: 1200px;
+	overflow: hidden;
+	position: relative;
+	height: 360px;
+}
+.case-icon-ul ul {
+	width: 5000px;
+	position: absolute;
+	left: 0;
+}

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>知识中心-专业知识</title>
+		<link rel="stylesheet" href="css/public11.css" />
+		<script type="text/javascript" src="js/jQuery.1.8.2.min.js" ></script>		
+		<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.source.js" ></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+		<style type="text/css">
+		.con-in11 {
+			padding: 60px 0;
+			box-sizing: border-box;
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.in-top {
+			width: 680px;
+			height: 60px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		.in-top ul li {
+			float: left;
+			margin-right: 30px;
+			width: 188px;
+			height: 52px;
+			text-align: center;
+			line-height: 52px;
+			border: 1px solid #e0e0e0;
+			font-size: 16px;
+		}
+		.in-top ul li a {
+			color: #999999;
+		}
+		.in-top ul li:hover {
+			background-color: #025bab;
+			box-shadow: 1px 1px 10px #b0cfed;
+		}
+		.in-top ul li:hover .aa {
+			color: white;
+		}
+		.slideTxtBox .hd{ 
+			height:30px; 
+			line-height:30px; 
+		    border-bottom:1px solid #025bab;  
+		    position:relative; 
+		}
+		 .slideTxtBox .hd ul{ 
+		 	float:left; 
+		 	position:absolute; 
+		 	left:0px; 
+		 }
+		 .slideTxtBox .hd ul li{
+		 	 float:left;
+		 	 width: 80px;
+		 	 background-color: #e0e0e0;
+		 	 color: #999999;
+		 	 text-align: center;
+		 	 cursor:pointer;  
+		 	 margin-right: 10px;
+		}
+		.bd li {
+			height: 138px;
+			background-color: #f5f5f5;
+			padding: 19px 58px;
+			box-sizing: border-box;
+			margin-top: 40px;
+		}
+		.p-up span:first-child {
+			display: inline-block;
+			width: 24px;
+			height: 24px;
+			text-align: center;
+			line-height: 24px;
+			font-size: 13px;
+			color: white;
+			background-color: #025bab;
+		}
+		.p-up span:nth-child(2) {
+			font-size: 22px;
+			margin-left: 20px;
+		}
+		.p-up span:nth-child(3) {
+			float: right;
+			margin-right: 10px;
+			line-height: 30px;
+			font-size: 10px;
+			color: #999999;
+		}
+		.p-up:last-child {
+			margin-top: 20px;
+		}
+		.p-up:last-child span {
+			background-color: #019a45;
+		}
+		.p-up p,.p-up:last-child span {
+			float: left;
+		}
+		.p-up p {
+			width: 1030px;
+			line-height: 28px;
+			margin-left: 25px;
+			font-size: 15px;
+			color: #666666;
+		}
+		.in-bom {
+			padding-top: 40px;
+			box-sizing: border-box;
+		}
+		.in-bom p {
+			display: block;
+			margin: 0 auto;
+			width: 128px;
+			height: 32px;
+			border: 1px solid #333333;
+			text-align: center;
+			line-height: 32px;
+		}
+    </style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-up">
+				<div class="top-up-in">
+					内部网站<select></select>
+					<span><a>中文</a>&nbsp;|&nbsp;<a>英语</a></span>
+				</div>
+			</div>
+			<div class="top-middle">
+				<div class="top-middlep-left">
+					<img src="img/home-logo.png">
+				</div>
+				<div class="top-middle-right">
+					<input type="text" placeholder="请输入关键字">
+					<p>搜索</p>
+				</div>
+			</div>
+		</div>
+		<div id="tab">
+			<ul>
+				<li><a href="#">首页</a>
+					<i class="tab-iFirst"></i>
+				</li>
+				<li class="li-li"><a href="#">走进华亿</a>
+					<i></i>
+				</li>
+				<li class="li-li"><a href="#">工程案例</a>
+					<i></i>
+				</li>
+				<li class="li-li"><a href="#">服务中心</a>
+					<i></i>
+				</li>
+				<li><a href="#">知识中心</a>
+					<i></i>
+				</li>
+				<li><a href="#">合作伙伴</a>
+					<i></i>
+				</li>
+				<li><a href="#">人才战略</a>
+					<i></i>
+				</li>
+				<li><a href="#">联系我们</a>
+					<i></i>
+				</li>
+			</ul>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul1">
+							<p>走进华亿</p>
+							<div class="sss"><a href="#">- 公司简介</a></div>
+							<div class="sss"><a href="#">- 企业文化</a></div>
+							<div class="sss"><a href="#">- 公司资质</a></div>
+							<div class="sss"><a href="#">- 公司荣誉</a></div>
+							<div class="sss"><a href="#">- 组织架构</a></div>
+							<div class="sss"><a href="#">- 员工风采</a></div>
+						</div>
+						<div class="content-ul1">
+							<p>主营业务</p>
+							<div class="sss"><a href="#">- CNG/LNG加气站总承包工程</a></div>
+							<div class="sss"><a href="#">- LNG气化站总承包工程</a></div>
+							<div class="sss"><a href="#">- 城镇燃气项目总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气输配项目总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气项目EMC总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气项目安全自动控制系统</a></div>
+							<div class="sss"><a href="#">- 燃气工程设计总承包工程</a></div>
+							<div class="sss"><a href="#">- 天然气汽车改装总承包工程</a></div>
+						</div>
+						<div class="content-ul1">
+							<p>公司新闻</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul"><p><a href="#">CNG加气站案例</a></p></div>
+						<div class="content-ul"><p><a href="#">LNG加气站案例</a></p></div>
+						<div class="content-ul"><p><a href="#">城市燃气案例</a></p></div>
+						<div class="content-ul"><p><a href="#">其他成功案例</a></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul">
+							<p>售前服务</p>
+							<div class="ss"><a href="#">-  建站审批流程</a></div>
+							<div class="ss"><a href="#">-  技术咨询</a></div>
+						</div>
+						<div class="content-ul">
+							<p>售中服务</p>
+							<div class="ss"><a href="#">-  技术培训</a></div>
+						</div>
+						<div class="content-ul">
+							<p>售后服务</p>
+							<div class="ss"><a href="#">-  问题反馈</a></div>
+						</div>
+						<div class="content-ul">
+							<p>其他服务</p>
+							<div class="ss"><a href="#">-  配件需求 </a></div>
+							<div class="ss"><a href="#">-  大修、维保、改造需求 </a></div>
+							<div class="ss"><a href="#">-  融资租赁 </a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="banner-top">
+				
+			</div>
+				
+			<div class="banner-bom">
+				<div class="ban-bottom-left">
+					<p>专业知识</p>
+				</div>
+				<div class="ban-bottom-right">
+					<p>当前位置：首页  -  知识中心   -  专业知识</p>
+				</div>
+			</div>
+		</div>
+		<!--content-->
+		<div class="content">
+			<div class="con-in11">
+				<div class="in-top">
+					<ul>
+						<li><a href="#" class="aa">
+							<p>加气站分类说明</p></a>
+						</li>
+						<li><a href="#" class="aa">
+							<p>加气站组成设备分类</p></a>
+						</li>
+						<li><a href="#" class="aa">
+							<p>产品对比优势</p></a>
+						</li>
+					</ul>
+				</div>
+				<div class="slideTxtBox">
+				    <div class="hd">
+				        <ul><li>CNG类</li><li>CNG类</li></ul>
+				    </div>
+				    <div class="bd">
+				        <ul>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				        </ul>
+				        <ul>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				            <li>
+				            	<div class="p-up">
+				            		<span>标</span>
+				            		<span>CNG常规管道站</span>
+				            		<span>2017-03-21</span>
+				            	</div>
+				            	<div class="p-up">
+				            		<span>内</span>
+				            		<p>加气站建设方式和特点：1、从城镇燃气中压管道开口取气，经
+				            			脱硫脱水等净化处理，并完成压缩加压后，进入储气设施，并通过三
+				            			线加气加对车辆加气；2、通常需要设置脱硫、脱水等净化装置；3、常采用多
+				            			级压缩机械活塞压缩机；4、无需配置拖车；5、取气、净化、压缩和加气在一
+				            			个站点完成；...</p>
+				            	</div>
+				            </li>
+				        </ul>
+				    </div>
+				</div>
+				
+				<script>
+					$(function(){
+						$(".slideTxtBox").slide({trigger:"click"});
+					})
+				</script>
+				<div class="in-bom">
+					<p>共5条</p>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+	    <div class="bottom">
+	    	<div class="bottom-left">
+	    		<ul>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic1.png">
+		    				<p>走进华亿</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 华亿介绍</a></li>
+	    					<li><a href="#">- 主营业务</a></li>
+	    					<li><a href="#">- 公司新闻</a></li>
+	    					<li><a href="#">- 网络办公</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic2.png">
+		    				<p>工程案例</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- CNG加气站案例</a></li>
+	    					<li><a href="#">- LNG加气站案例</a></li>
+	    					<li><a href="#">- 城市燃气案例</a></li>
+	    					<li><a href="#">- 其他案例</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic3.png">
+		    				<p>服务中心</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 售前服务</a></li>
+	    					<li><a href="#">- 售中服务</a></li>
+	    					<li><a href="#">- 售后服务</a></li>
+	    					<li><a href="#">- 其他服务</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic4.png">
+		    				<p>知识中心</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 国家政策</a></li>
+	    					<li><a href="#">- 行业新闻</a></li>
+	    					<li><a href="#">- 专业知识</a></li>
+	    				</ul>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    	<div class="bottom-right">
+	    		<img src="img/home-bom-logo.png">
+	    		<p>四川华亿石油天然气工程有限公司
+					@华亿石油天然气工程有限公司版权所有2013
+					地址：成都市郫县现代工业港港北一路288号</p>
+				<div class="bottom-right-bom">
+					<img src="img/home-phone.png">
+					<span>028-88888888</span>
+				</div>
+	    	</div>
+	    </div>
+	   <!-- foot-->
+	   <div class="footer">
+	   		<div class="footer-in">
+		   		<div class="footer-left">
+		   			<img src="img/home-foot-logo.png">
+		   		</div>
+		   		<div class="footer-right">
+		   			<p>网站使用条款和条件 网站地图 反馈</p>
+		   		</div>
+		   	</div>
+	   </div>
+	   <!-- right-->
+	  <div class="right11">
+	  	<ul>
+	  		<li><a href="#">
+	  			<img src="img/rightA.png"></a>
+	  		</li>
+	  		<li><a href="#">
+	  			<img src="img/rightB.png"></a>
+	  		</li>
+	  	</ul>
+	  </div>
+	</body>
+</html>

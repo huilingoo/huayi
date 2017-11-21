@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>知识中心-国家政策</title>
+		<link rel="stylesheet" href="css/public11.css" />
+		<script type="text/javascript" src="js/jQuery.1.8.2.min.js" ></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+	</head>
+	<style type="text/css">
+	.con-in1 {
+		padding: 60px 0;
+		box-sizing: border-box;
+		width: 1200px;
+		margin: 0 auto;
+	}
+	.con-in1 ul {
+		overflow: hidden;
+	}
+	.con-in1 ul li {
+		float: left;
+		margin-right: 40px;
+		margin-bottom: 40px;
+		width: 372px;
+		height: 360px;
+		position: relative;
+	}
+	.con-in1 ul li img {
+		border: none;
+	}
+	.con-in1 ul li:nth-child(3n+3) {
+		margin-right: 0px;
+	}
+	.box {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 72px;
+		height: 122px;
+	}
+	.box-up p {
+		color: white;
+		font-size: 18px;
+		text-align: center;
+		line-height: 42px;
+		background-color: #025bab;
+	}
+	.box-down {
+		padding-top: 10px;
+		box-sizing: border-box;
+		width: 72px;
+		height: 80px;
+		background-color: #ededed;
+		text-align: center;
+	}
+	.box-down p:first-child {
+		font-size: 29px;
+		color: black;
+	}
+	.box-down p:last-child {
+		font-size: 12px;
+		color: #666666;
+	}
+	.con-in1 ul li img {
+		position: absolute;
+		right: 0;
+	}
+	.li-down {
+		width: 300px;
+		padding: 10px 5px;
+		box-sizing: border-box;
+		position: absolute;
+		bottom: 23px;
+		
+	}
+	.li-down p:first-child {
+		font-size: 17px;
+		color: black;
+		line-height: 38px;
+	}
+	.li-down p:last-child {
+		font-size: 13px;
+		color: #666666;
+		line-height: 20px;
+		text-indent: 2em;
+	}
+    .hover {
+    	position: absolute;
+    	top: 0;
+    	left: 72px;
+    	width: 300px;
+    	height: 360px;
+    	transition: 0.3s all;
+    } 
+	.con-in1 ul li:hover .hover {
+		box-shadow: 1px 1px 12px #86a8c1;
+	}
+	</style>
+	<body>
+		<div class="top">
+			<div class="top-up">
+				<div class="top-up-in">
+					内部网站<select></select>
+					<span><a>中文</a>&nbsp;|&nbsp;<a>英语</a></span>
+				</div>
+			</div>
+			<div class="top-middle">
+				<div class="top-middlep-left">
+					<img src="img/home-logo.png">
+				</div>
+				<div class="top-middle-right">
+					<input type="text" placeholder="请输入关键字">
+					<p>搜索</p>
+				</div>
+			</div>
+		</div>
+		<div id="tab">
+			<ul>
+				<li><a href="#">首页</a>
+					<i class="tab-iFirst"></i>
+				</li>
+				<li class="li-li"><a href="#">走进华亿</a>
+					<i></i>
+				</li>
+				<li class="li-li"><a href="#">工程案例</a>
+					<i></i>
+				</li>
+				<li class="li-li"><a href="#">服务中心</a>
+					<i></i>
+				</li>
+				<li><a href="#">知识中心</a>
+					<i></i>
+				</li>
+				<li><a href="#">合作伙伴</a>
+					<i></i>
+				</li>
+				<li><a href="#">人才战略</a>
+					<i></i>
+				</li>
+				<li><a href="#">联系我们</a>
+					<i></i>
+				</li>
+			</ul>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul1">
+							<p>走进华亿</p>
+							<div class="sss"><a href="#">- 公司简介</a></div>
+							<div class="sss"><a href="#">- 企业文化</a></div>
+							<div class="sss"><a href="#">- 公司资质</a></div>
+							<div class="sss"><a href="#">- 公司荣誉</a></div>
+							<div class="sss"><a href="#">- 组织架构</a></div>
+							<div class="sss"><a href="#">- 员工风采</a></div>
+						</div>
+						<div class="content-ul1">
+							<p>主营业务</p>
+							<div class="sss"><a href="#">- CNG/LNG加气站总承包工程</a></div>
+							<div class="sss"><a href="#">- LNG气化站总承包工程</a></div>
+							<div class="sss"><a href="#">- 城镇燃气项目总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气输配项目总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气项目EMC总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气项目安全自动控制系统</a></div>
+							<div class="sss"><a href="#">- 燃气工程设计总承包工程</a></div>
+							<div class="sss"><a href="#">- 天然气汽车改装总承包工程</a></div>
+						</div>
+						<div class="content-ul1">
+							<p>公司新闻</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul"><p><a href="#">CNG加气站案例</a></p></div>
+						<div class="content-ul"><p><a href="#">LNG加气站案例</a></p></div>
+						<div class="content-ul"><p><a href="#">城市燃气案例</a></p></div>
+						<div class="content-ul"><p><a href="#">其他成功案例</a></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul">
+							<p>售前服务</p>
+							<div class="ss"><a href="#">-  建站审批流程</a></div>
+							<div class="ss"><a href="#">-  技术咨询</a></div>
+						</div>
+						<div class="content-ul">
+							<p>售中服务</p>
+							<div class="ss"><a href="#">-  技术培训</a></div>
+						</div>
+						<div class="content-ul">
+							<p>售后服务</p>
+							<div class="ss"><a href="#">-  问题反馈</a></div>
+						</div>
+						<div class="content-ul">
+							<p>其他服务</p>
+							<div class="ss"><a href="#">-  配件需求 </a></div>
+							<div class="ss"><a href="#">-  大修、维保、改造需求 </a></div>
+							<div class="ss"><a href="#">-  融资租赁 </a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="banner-top">
+				
+			</div>
+				
+			<div class="banner-bom">
+				<div class="ban-bottom-left">
+					<p>国家政策</p>
+				</div>
+				<div class="ban-bottom-right">
+					<p>当前位置：首页  -  知识中心   -  国家政策</p>
+				</div>
+			</div>
+		</div>
+		<!--content-->
+		<div class="content">
+			<div class="con-in1">
+				<ul>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="box">
+								<div class="box-up">
+									<p>Mar</p>
+								</div>
+								<div class="box-down">
+									<p>08</p>
+									<p>2017</p>
+								</div>
+							</div>
+							<div class="hover">
+								<img src="img/knowledge-pic1.png">
+								<div class="li-down">
+									<p>彭博：伊拉克、安哥拉表示希...</p>
+									<p>周二(3月7日)据彭博报道，周一在剑桥能源周(CERA Week oil-industry)...</p>
+								</div>
+							</div>
+					    </a>
+					</li>
+				</ul>
+				<div class="con-in-bom">
+					<a href="#">点击加载更多</a>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+	    <div class="bottom">
+	    	<div class="bottom-left">
+	    		<ul>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic1.png">
+		    				<p>走进华亿</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 华亿介绍</a></li>
+	    					<li><a href="#">- 主营业务</a></li>
+	    					<li><a href="#">- 公司新闻</a></li>
+	    					<li><a href="#">- 网络办公</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic2.png">
+		    				<p>工程案例</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- CNG加气站案例</a></li>
+	    					<li><a href="#">- LNG加气站案例</a></li>
+	    					<li><a href="#">- 城市燃气案例</a></li>
+	    					<li><a href="#">- 其他案例</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic3.png">
+		    				<p>服务中心</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 售前服务</a></li>
+	    					<li><a href="#">- 售中服务</a></li>
+	    					<li><a href="#">- 售后服务</a></li>
+	    					<li><a href="#">- 其他服务</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic4.png">
+		    				<p>知识中心</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 国家政策</a></li>
+	    					<li><a href="#">- 行业新闻</a></li>
+	    					<li><a href="#">- 专业知识</a></li>
+	    				</ul>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    	<div class="bottom-right">
+	    		<img src="img/home-bom-logo.png">
+	    		<p>四川华亿石油天然气工程有限公司
+					@华亿石油天然气工程有限公司版权所有2013
+					地址：成都市郫县现代工业港港北一路288号</p>
+				<div class="bottom-right-bom">
+					<img src="img/home-phone.png">
+					<span>028-88888888</span>
+				</div>
+	    	</div>
+	    </div>
+	   <!-- foot-->
+	   <div class="footer">
+	   		<div class="footer-in">
+		   		<div class="footer-left">
+		   			<img src="img/home-foot-logo.png">
+		   		</div>
+		   		<div class="footer-right">
+		   			<p>网站使用条款和条件 网站地图 反馈</p>
+		   		</div>
+		   	</div>
+	   </div>
+	  <!-- right-->
+	  <div class="right11">
+	  	<ul>
+	  		<li><a href="#">
+	  			<img src="img/rightA.png"></a>
+	  		</li>
+	  		<li><a href="#">
+	  			<img src="img/rightB.png"></a>
+	  		</li>
+	  	</ul>
+	  </div>
+	</body>
+</html>

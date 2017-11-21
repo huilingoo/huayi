@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>走进华亿-公司荣誉</title>
+		 <link rel="stylesheet" href="css/public11.css" />
+		 <link rel="stylesheet" href="css/enter.css" />
+		<script type="text/javascript" src="js/jQuery.1.8.2.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/public.js" ></script>
+		<script type="text/javascript" src="js/pic_tab.js"></script>
+		 
+	</head>
+</style>
+	<script>
+    jq(function(){
+        jq('#demo1').banqh({
+            box:"#demo1",//总框架
+            pic:"#ban_pic1",//大图框架
+            pnum:"#ban_num1",//小图框架
+            prev_btn:"#prev_btn1",//小图左箭头
+            next_btn:"#next_btn1",//小图右箭头
+            pop_prev:"#prev2",//弹出框左箭头
+            pop_next:"#next2",//弹出框右箭头
+            prev:"#prev1",//大图左箭头
+            next:"#next1",//大图右箭头
+            pop_div:"#demo2",//弹出框框架
+            pop_pic:"#ban_pic2",//弹出框图片框架
+            pop_xx:".pop_up_xx",//关闭弹出框按钮
+            mhc:".mhc",//朦灰层
+            delayTime:400,//切换一张图片时间
+            pop_delayTime:400,//弹出框切换一张图片时间
+            order:0,//当前显示的图片（从0开始）
+            picdire:true,//大图滚动方向（true为水平方向滚动）
+            mindire:true,//小图滚动方向（true为水平方向滚动）
+            min_picnum:5,//小图显示数量
+            pop_up:true//大图是否有弹出框
+        })
+    })
+</script>
+<script>
+    function picBig() {
+        var v = document.getElementById('divCenter');
+        v.style.display = "block";
+    }
+    function picClose() {
+        var v = document.getElementById('divCenter');
+        v.style.display = "none";
+    }
+</script>
+<script type="text/javascript">
+    //缩略图滚动事件
+    $(".jCarouselLite").jCarouselLite({
+        btnNext: "#btnNext",
+        btnPrev: "#btnPrev",
+        scroll: 1,
+        speed: 240,
+        circular: false,
+        visible: 6
+    });
+</script>
+<script type="text/javascript">
+    var currentImage;
+    var currentIndex = -1;
+
+    //显示大图(参数index从0开始计数)
+    function showImage(index){
+
+        //更新当前图片页码
+        $(".CounterCurrent").html(index + 1);
+
+        //隐藏或显示向左向右鼠标手势
+        var len = $('#OriginalPic img').length;
+        if(index == len - 1){
+            $("#aNext").hide();
+        }else{
+            $("#aNext").show();
+        }
+
+        if(index == 0){
+            $("#aPrev").hide();
+        }else{
+            $("#aPrev").show();
+        }
+
+        //显示大图
+        if(index < $('#OriginalPic img').length){
+            var indexImage = $('#OriginalPic p')[index];
+
+            //隐藏当前的图
+            if(currentImage){
+                if(currentImage != indexImage){
+                    $(currentImage).css('z-index', 2);
+                    $(currentImage).fadeOut(0,function(){
+                        $(this).css({'display':'none','z-index':1})
+                    });
+                }
+            }
+
+            //显示用户选择的图
+            $(indexImage).show().css({'opacity': 0.4});
+            $(indexImage).animate({opacity:1},{duration:200});
+
+            //更新变量
+            currentImage = indexImage;
+            currentIndex = index;
+
+            //移除并添加高亮
+            $('#ThumbPic img').removeClass('active');
+            $($('#ThumbPic img')[index]).addClass('active');
+
+            //设置向左向右鼠标手势区域的高度
+            //var tempHeight = $($('#OriginalPic img')[index]).height();
+            //$('#aPrev').height(tempHeight);
+            //$('#aNext').height(tempHeight);
+        }
+    }
+
+    //下一张
+    function ShowNext(){
+        var len = $('#OriginalPic img').length;
+        var next = currentIndex < (len - 1) ? currentIndex + 1 : 0;
+        showImage(next);
+    }
+
+    //上一张
+    function ShowPrep(){
+        var len = $('#OriginalPic img').length;
+        var next = currentIndex == 0 ? (len - 1) : currentIndex - 1;
+        showImage(next);
+    }
+
+    //下一张事件
+    $("#aNext").click(function(){
+        ShowNext();
+        if($(".active").position().left >= 144 * 5){
+            $("#btnNext").click();
+        }
+    });
+
+    //上一张事件
+    $("#aPrev").click(function(){
+        ShowPrep();
+        if($(".active").position().left <= 144 * 5){
+            $("#btnPrev").click();
+        }
+    });
+
+    //初始化事件
+    $(".OriginalPicBorder").ready(function(){
+        ShowNext();
+
+        //绑定缩略图点击事件
+        $('#ThumbPic li').bind('click',function(e){
+            var count = $(this).attr('rel');
+            showImage(parseInt(count) - 1);
+        });
+    });
+</script>
+	<body>
+		<div class="top">
+			<div class="top-up">
+				<div class="top-up-in">
+					内部网站<select></select>
+					<span><a>中文</a>&nbsp;|&nbsp;<a>英语</a></span>
+				</div>
+			</div>
+			<div class="top-middle">
+				<div class="top-middlep-left">
+					<img src="img/home-logo.png">
+				</div>
+				<div class="top-middle-right">
+					<input type="text" placeholder="请输入关键字">
+					<p>搜索</p>
+				</div>
+			</div>
+		</div>
+		<div id="tab">
+			<ul>
+				<li><a href="#">首页</a>
+					<i class="tab-iFirst"></i>
+				</li>
+				<li class="li-li"><a href="#">走进华亿</a>
+					<i></i>
+				</li>
+				<li class="li-li"><a href="#">工程案例</a>
+					<i></i>
+				</li>
+				<li class="li-li"><a href="#">服务中心</a>
+					<i></i>
+				</li>
+				<li><a href="#">知识中心</a>
+					<i></i>
+				</li>
+				<li><a href="#">合作伙伴</a>
+					<i></i>
+				</li>
+				<li><a href="#">人才战略</a>
+					<i></i>
+				</li>
+				<li><a href="#">联系我们</a>
+					<i></i>
+				</li>
+			</ul>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul1">
+							<p>走进华亿</p>
+							<div class="sss"><a href="#">- 公司简介</a></div>
+							<div class="sss"><a href="#">- 企业文化</a></div>
+							<div class="sss"><a href="#">- 公司资质</a></div>
+							<div class="sss"><a href="#">- 公司荣誉</a></div>
+							<div class="sss"><a href="#">- 组织架构</a></div>
+							<div class="sss"><a href="#">- 员工风采</a></div>
+						</div>
+						<div class="content-ul1">
+							<p>主营业务</p>
+							<div class="sss"><a href="#">- CNG/LNG加气站总承包工程</a></div>
+							<div class="sss"><a href="#">- LNG气化站总承包工程</a></div>
+							<div class="sss"><a href="#">- 城镇燃气项目总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气输配项目总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气项目EMC总承包工程</a></div>
+							<div class="sss"><a href="#">- 燃气项目安全自动控制系统</a></div>
+							<div class="sss"><a href="#">- 燃气工程设计总承包工程</a></div>
+							<div class="sss"><a href="#">- 天然气汽车改装总承包工程</a></div>
+						</div>
+						<div class="content-ul1">
+							<p>公司新闻</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul"><p><a href="#">CNG加气站案例</a></p></div>
+						<div class="content-ul"><p><a href="#">LNG加气站案例</a></p></div>
+						<div class="content-ul"><p><a href="#">城市燃气案例</a></p></div>
+						<div class="content-ul"><p><a href="#">其他成功案例</a></p></div>
+					</div>
+				</div>
+			</div>
+			<div class="li-tab">
+				<div class="li-tab-in">
+					<div class="img">
+						<img src="img/service2-pic1.png">
+					</div>
+					<div class="tab-content">
+						<div class="content-ul">
+							<p>售前服务</p>
+							<div class="ss"><a href="#">-  建站审批流程</a></div>
+							<div class="ss"><a href="#">-  技术咨询</a></div>
+						</div>
+						<div class="content-ul">
+							<p>售中服务</p>
+							<div class="ss"><a href="#">-  技术培训</a></div>
+						</div>
+						<div class="content-ul">
+							<p>售后服务</p>
+							<div class="ss"><a href="#">-  问题反馈</a></div>
+						</div>
+						<div class="content-ul">
+							<p>其他服务</p>
+							<div class="ss"><a href="#">-  配件需求 </a></div>
+							<div class="ss"><a href="#">-  大修、维保、改造需求 </a></div>
+							<div class="ss"><a href="#">-  融资租赁 </a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="banner-top">
+				
+			</div>
+				
+			<div class="banner-bom">
+				<div class="ban-bottom-left">
+					<p>公司荣誉</p>
+				</div>
+				<div class="ban-bottom-right">
+					<p>当前位置：首页  -  走进华亿  -华亿介绍  -  公司荣誉</p>
+				</div>
+			</div>
+		</div>
+		<!--content-->
+		<div class="content">
+			<div class="con-in">
+				 <div class="tex1">
+		            <ul>
+		                <li style="margin: 0 30px">
+		                    <a name="fff" href="javascript:void(0);" onclick="picBig()">
+		                    <div style="position:relative"><img src="img/走进华亿-荣誉_03.png">
+		                    </div><div class="chborder"></div>
+		                    <p style="text-align: center">2011年度内蒙华油优秀施工单位</p>
+		                    </a>
+		                </li>
+		                <li style="margin: 0 30px">
+		                    <a name="fff" href="javascript:void(0);" onclick="picBig()">
+		                        <div style="position:relative"><img src="img/走进华亿-荣誉_03.png">
+		                        </div><div class="chborder"></div>
+		                        <p style="text-align: center">2011年度内蒙华油优秀施工单位</p>
+		                    </a>
+		                </li>
+		                <li style="margin: 0 30px">
+		                    <a name="fff" href="javascript:void(0);" onclick="picBig()">
+		                        <div style="position:relative"><img src="img/走进华亿-荣誉_03.png">
+		                        </div><div class="chborder"></div>
+		                        <p style="text-align: center">2011年度内蒙华油优秀施工单位</p>
+		                    </a>
+		                </li>
+		                 <li style="margin: 0 30px">
+		                    <a name="fff" href="javascript:void(0);" onclick="picBig()">
+		                        <div style="position:relative"><img src="img/走进华亿-荣誉_03.png">
+		                        </div><div class="chborder"></div>
+		                        <p style="text-align: center">2011年度内蒙华油优秀施工单位</p>
+		                    </a>
+		                </li>
+		                 <li style="margin: 0 30px">
+		                    <a name="fff" href="javascript:void(0);" onclick="picBig()">
+		                        <div style="position:relative"><img src="img/走进华亿-荣誉_03.png">
+		                        </div><div class="chborder"></div>
+		                        <p style="text-align: center">2011年度内蒙华油优秀施工单位</p>
+		                    </a>
+		                </li>
+		            </ul>
+        		</div>
+        		<div class="picshow" id="divCenter" style="background-color: rgba(6,6,6,0.7);width: 1200px;height: 100%; ">
+            <div class="picshow1"><a href="javascript:void(0);" onclick="picClose();"><div><img src="img/mke_close.png" ></div></a></div>
+            <div class="ban" id="demo1">
+                <div class="ban2" id="ban_pic1">
+                    <div class="prev1" id="prev1">
+                        <img src="img/index_tab_l.png" width="28" height="51"  />
+                    </div>
+                    <div class="next1" id="next1">
+                        <img src="img/index_tab_r.png" width="28" height="51"  />
+                    </div>
+                    <ul>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                        <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="500" height="500" /></a></li>
+                    </ul>
+                </div>
+                <div class="min_pic">
+                    <div class="prev_btn1" id="prev_btn1"><img src="img/feel3.png" width="9" height="18"  /></div>
+                    <div class="num clearfix" id="ban_num1">
+                        <ul>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                            <li><a href="javascript:;"><img src="img/走进华亿-荣誉_03.png" width="80" height="80" /></a></li>
+                        </ul>
+                    </div>
+                    <div class="next_btn1" id="next_btn1"><img src="img/feel4.png" width="9" height="18"  /></div>
+                </div>
+            </div>
+        </div>
+			</div>
+		</div>
+		<!--底部-->
+	    <div class="bottom">
+	    	<div class="bottom-left">
+	    		<ul>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic1.png">
+		    				<p>走进华亿</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 华亿介绍</a></li>
+	    					<li><a href="#">- 主营业务</a></li>
+	    					<li><a href="#">- 公司新闻</a></li>
+	    					<li><a href="#">- 网络办公</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic2.png">
+		    				<p>工程案例</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- CNG加气站案例</a></li>
+	    					<li><a href="#">- LNG加气站案例</a></li>
+	    					<li><a href="#">- 城市燃气案例</a></li>
+	    					<li><a href="#">- 其他案例</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic3.png">
+		    				<p>服务中心</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 售前服务</a></li>
+	    					<li><a href="#">- 售中服务</a></li>
+	    					<li><a href="#">- 售后服务</a></li>
+	    					<li><a href="#">- 其他服务</a></li>
+	    				</ul>
+	    			</li>
+	    			<li class="li2">
+	    				<div class="li-top">
+		    				<img src="img/home-pic4.png">
+		    				<p>知识中心</p>
+		    			</div>
+	    				<ul>
+	    					<li><a href="#">- 国家政策</a></li>
+	    					<li><a href="#">- 行业新闻</a></li>
+	    					<li><a href="#">- 专业知识</a></li>
+	    				</ul>
+	    			</li>
+	    		</ul>
+	    	</div>
+	    	<div class="bottom-right">
+	    		<img src="img/home-bom-logo.png">
+	    		<p>四川华亿石油天然气工程有限公司
+					@华亿石油天然气工程有限公司版权所有2013
+					地址：成都市郫县现代工业港港北一路288号</p>
+				<div class="bottom-right-bom">
+					<img src="img/home-phone.png">
+					<span>028-88888888</span>
+				</div>
+	    	</div>
+	    </div>
+	   <!-- foot-->
+	   <div class="footer">
+	   		<div class="footer-in">
+		   		<div class="footer-left">
+		   			<img src="img/home-foot-logo.png">
+		   		</div>
+		   		<div class="footer-right">
+		   			<p>网站使用条款和条件 网站地图 反馈</p>
+		   		</div>
+		   	</div>
+	   </div>
+	    <!-- right-->
+	  <div class="right11">
+	  	<ul>
+	  		<li><a href="#">
+	  			<img src="img/rightA.png"></a>
+	  		</li>
+	  		<li><a href="#">
+	  			<img src="img/rightB.png"></a>
+	  		</li>
+	  	</ul>
+	  </div>
+	</body>
+</html>
